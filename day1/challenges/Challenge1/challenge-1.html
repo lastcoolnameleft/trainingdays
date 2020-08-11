@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Challenge 1: PowerShell: Configure PowerShell for Azure Administration &amp; Create a VM Using PowerShell. | Azure Developer College</title>
+    <meta name="generator" content="VuePress 1.5.3">
+    
+    <meta name="description" content="">
+    <link rel="preload" href="/trainingdays/assets/css/0.styles.62bd769a.css" as="style"><link rel="preload" href="/trainingdays/assets/js/app.50824011.js" as="script"><link rel="preload" href="/trainingdays/assets/js/2.2f47d838.js" as="script"><link rel="preload" href="/trainingdays/assets/js/39.3c2d65ac.js" as="script"><link rel="prefetch" href="/trainingdays/assets/js/10.151cb87a.js"><link rel="prefetch" href="/trainingdays/assets/js/11.c85ea4bb.js"><link rel="prefetch" href="/trainingdays/assets/js/12.7a884dab.js"><link rel="prefetch" href="/trainingdays/assets/js/13.272351fb.js"><link rel="prefetch" href="/trainingdays/assets/js/14.8b9902dc.js"><link rel="prefetch" href="/trainingdays/assets/js/15.4a76007a.js"><link rel="prefetch" href="/trainingdays/assets/js/16.200ee166.js"><link rel="prefetch" href="/trainingdays/assets/js/17.fd032e62.js"><link rel="prefetch" href="/trainingdays/assets/js/18.29b8041e.js"><link rel="prefetch" href="/trainingdays/assets/js/19.2f8a33d4.js"><link rel="prefetch" href="/trainingdays/assets/js/20.9b7df7de.js"><link rel="prefetch" href="/trainingdays/assets/js/21.f9765aa4.js"><link rel="prefetch" href="/trainingdays/assets/js/22.e2044a0c.js"><link rel="prefetch" href="/trainingdays/assets/js/23.a5e8a177.js"><link rel="prefetch" href="/trainingdays/assets/js/24.d3ff2f15.js"><link rel="prefetch" href="/trainingdays/assets/js/25.70e266ff.js"><link rel="prefetch" href="/trainingdays/assets/js/26.91e14861.js"><link rel="prefetch" href="/trainingdays/assets/js/27.21c77c35.js"><link rel="prefetch" href="/trainingdays/assets/js/28.6e654e53.js"><link rel="prefetch" href="/trainingdays/assets/js/29.c4c7cd60.js"><link rel="prefetch" href="/trainingdays/assets/js/3.d2416de3.js"><link rel="prefetch" href="/trainingdays/assets/js/30.89795041.js"><link rel="prefetch" href="/trainingdays/assets/js/31.04723a24.js"><link rel="prefetch" href="/trainingdays/assets/js/32.638bb870.js"><link rel="prefetch" href="/trainingdays/assets/js/33.c86b2866.js"><link rel="prefetch" href="/trainingdays/assets/js/34.bffb20d7.js"><link rel="prefetch" href="/trainingdays/assets/js/35.fc10a53b.js"><link rel="prefetch" href="/trainingdays/assets/js/36.61a45d91.js"><link rel="prefetch" href="/trainingdays/assets/js/37.75f35434.js"><link rel="prefetch" href="/trainingdays/assets/js/38.9d89ed8a.js"><link rel="prefetch" href="/trainingdays/assets/js/4.9dea503e.js"><link rel="prefetch" href="/trainingdays/assets/js/40.e031f652.js"><link rel="prefetch" href="/trainingdays/assets/js/41.c6130e9a.js"><link rel="prefetch" href="/trainingdays/assets/js/42.f35f9894.js"><link rel="prefetch" href="/trainingdays/assets/js/43.268fda96.js"><link rel="prefetch" href="/trainingdays/assets/js/44.9e0560cc.js"><link rel="prefetch" href="/trainingdays/assets/js/45.3c699688.js"><link rel="prefetch" href="/trainingdays/assets/js/46.28648f7e.js"><link rel="prefetch" href="/trainingdays/assets/js/47.5323c732.js"><link rel="prefetch" href="/trainingdays/assets/js/48.d3945e9d.js"><link rel="prefetch" href="/trainingdays/assets/js/49.024ec880.js"><link rel="prefetch" href="/trainingdays/assets/js/5.5a039577.js"><link rel="prefetch" href="/trainingdays/assets/js/50.1e11d47a.js"><link rel="prefetch" href="/trainingdays/assets/js/51.ab30eae8.js"><link rel="prefetch" href="/trainingdays/assets/js/52.6100b8ff.js"><link rel="prefetch" href="/trainingdays/assets/js/53.49c358dd.js"><link rel="prefetch" href="/trainingdays/assets/js/54.f046d0ba.js"><link rel="prefetch" href="/trainingdays/assets/js/55.1b89c46d.js"><link rel="prefetch" href="/trainingdays/assets/js/56.727a6857.js"><link rel="prefetch" href="/trainingdays/assets/js/57.a27d67d3.js"><link rel="prefetch" href="/trainingdays/assets/js/58.1e73e68a.js"><link rel="prefetch" href="/trainingdays/assets/js/59.1682dbd3.js"><link rel="prefetch" href="/trainingdays/assets/js/6.8748b295.js"><link rel="prefetch" href="/trainingdays/assets/js/60.690fb75f.js"><link rel="prefetch" href="/trainingdays/assets/js/61.c2a929ac.js"><link rel="prefetch" href="/trainingdays/assets/js/62.8450cf52.js"><link rel="prefetch" href="/trainingdays/assets/js/7.5a52ec54.js"><link rel="prefetch" href="/trainingdays/assets/js/8.571094df.js"><link rel="prefetch" href="/trainingdays/assets/js/9.c6ef0889.js">
+    <link rel="stylesheet" href="/trainingdays/assets/css/0.styles.62bd769a.css">
+  </head>
+  <body>
+    <div id="app" data-server-rendered="true"><div class="theme-container"><header class="navbar"><div class="sidebar-button"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" viewBox="0 0 448 512" class="icon"><path fill="currentColor" d="M436 124H12c-6.627 0-12-5.373-12-12V80c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12z"></path></svg></div> <a href="/trainingdays/" class="home-link router-link-active"><!----> <span class="site-name">Azure Developer College</span></a> <div class="links"><div class="search-box"><input aria-label="Search" autocomplete="off" spellcheck="false" value=""> <!----></div> <nav class="nav-links can-hide"> <a href="https://github.com/azuredevcollege/trainingdays" target="_blank" rel="noopener noreferrer" class="repo-link">
+    GitHub
+    <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></nav></div></header> <div class="sidebar-mask"></div> <aside class="sidebar"><nav class="nav-links"> <a href="https://github.com/azuredevcollege/trainingdays" target="_blank" rel="noopener noreferrer" class="repo-link">
+    GitHub
+    <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></nav>  <ul class="sidebar-links"><li><a href="/trainingdays/" aria-current="page" class="sidebar-link">Home</a></li><li><a href="/trainingdays/day1/" aria-current="page" class="sidebar-link">Day 1 Azure Fundamentals &amp; Infrastructure</a></li><li><a href="/trainingdays/day2/" class="sidebar-link">Day 2 Azure Development</a></li><li><a href="/trainingdays/day3/" class="sidebar-link">Day 3 Data and AI</a></li><li><a href="/trainingdays/day4/" class="sidebar-link">Day 4 Azure DevOps</a></li><li><a href="/trainingdays/day5/" class="sidebar-link">Day 5 Identity and Architecture</a></li></ul> </aside> <main class="page"> <div class="theme-default-content content__default"><h1 id="challenge-1-powershell-configure-powershell-for-azure-administration-create-a-vm-using-powershell"><a href="#challenge-1-powershell-configure-powershell-for-azure-administration-create-a-vm-using-powershell" class="header-anchor">#</a> Challenge 1: PowerShell: Configure PowerShell for Azure Administration &amp; Create a VM Using PowerShell.</h1> <p><a href="/trainingdays/day1/" class="router-link-active">back</a></p> <h2 id="here-is-what-you-will-learn"><a href="#here-is-what-you-will-learn" class="header-anchor">#</a> Here is what you will learn</h2> <ul><li>Which PowerShell modules to download for Azure administration</li> <li>How to update the modules as version updates <strong>will</strong> happen.</li> <li>Use help with <em>-examples</em> to speed your coding through code snippets</li> <li>Deploy your first Azure VM using code.</li></ul> <h2 id="install-powershell-az-modules-for-azure"><a href="#install-powershell-az-modules-for-azure" class="header-anchor">#</a> Install PowerShell Az Modules for Azure</h2> <p>Open PowerShell <strong>as administrator</strong> and execute:</p> <div class="language- extra-class"><pre class="language-text"><code>Install-Module Az
+</code></pre></div><p>Press 'Y' and allow the installation of the latest Nuget Package Provider:</p> <div class="language- extra-class"><pre class="language-text"><code>NuGet provider is required to continue
+PowerShellGet requires NuGet provider version '2.8.5.201' or newer to interact with NuGet-based repositories. The NuGet
+ provider must be available in 'C:\Program Files\PackageManagement\ProviderAssemblies' or
+'C:\Users\Administrator\AppData\Local\PackageManagement\ProviderAssemblies'. You can also install the NuGet provider by
+ running 'Install-PackageProvider -Name NuGet -MinimumVersion 2.8.5.201 -Force'. Do you want PowerShellGet to install
+and import the NuGet provider now?
+[Y] Yes  [N] No  [S] Suspend  [?] Help (default is &quot;Y&quot;): y
+</code></pre></div><p>Press 'A' to make the PowerShell Gallery a trusted code repository - this is the Code source for the Azure Az modules:</p> <div class="language- extra-class"><pre class="language-text"><code>Untrusted repository
+You are installing the modules from an untrusted repository. If you trust this repository, change its
+InstallationPolicy value by running the Set-PSRepository cmdlet. Are you sure you want to install the modules from
+'PSGallery'?
+[Y] Yes  [A] Yes to All  [N] No  [L] No to All  [S] Suspend  [?] Help (default is &quot;N&quot;): a
+</code></pre></div><p>The installation will take a while. After install you can query the modules and it's versions using:</p> <div class="language- extra-class"><pre class="language-text"><code>get-module Az* -ListAvailable
+</code></pre></div><p>Output will be something like:</p> <div class="language- extra-class"><pre class="language-text"><code>Directory: C:\Program Files\WindowsPowerShell\Modules
+
+
+ModuleType Version    Name                                ExportedCommands
+---------- -------    ----                                ----------------
+Script     1.4.0      Az.Accounts                         {Disable-AzDataCollection, Disable-AzContextAutosave, Enab...
+Script     1.0.1      Az.Aks                              {Get-AzAks, New-AzAks, Remove-AzAks, Import-AzAksCredentia...
+Script     1.0.2      Az.AnalysisServices                 {Resume-AzAnalysisServicesServer, Suspend-AzAnalysisServic...
+Script     1.0.0      Az.ApiManagement                    {Add-AzApiManagementRegion, Get-AzApiManagementSsoToken, N...
+Script     1.0.0      Az.ApplicationInsights              {Get-AzApplicationInsights, New-AzApplicationInsights, Rem...
+Script     1.2.0      Az.Automation                       {Get-AzAutomationHybridWorkerGroup, Remove-AzAutomationHyb...
+Script     1.0.0      Az.Batch                            {Remove-AzBatchAccount, Get-AzBatchAccount, Get-AzBatchAcc...
+Script     1.0.0      Az.Billing                          {Get-AzBillingInvoice, Get-AzBillingPeriod, Get-AzEnrollme...
+Script     1.1.0      Az.Cdn                              {Get-AzCdnProfile, Get-AzCdnProfileSsoUrl, New-AzCdnProfil...
+Script     1.0.1      Az.CognitiveServices                {Get-AzCognitiveServicesAccount, Get-AzCognitiveServicesAc...
+Script     1.6.0      Az.Compute                          {Remove-AzAvailabilitySet, Get-AzAvailabilitySet, New-AzAv...
+Script     1.0.0      Az.ContainerInstance                {New-AzContainerGroup, Get-AzContainerGroup, Remove-AzCont...
+Script     1.0.1      Az.ContainerRegistry                {New-AzContainerRegistry, Get-AzContainerRegistry, Update-...
+.
+.
+.
+</code></pre></div><h2 id="first-steps-login-to-azure-and-select-your-target-subscription"><a href="#first-steps-login-to-azure-and-select-your-target-subscription" class="header-anchor">#</a> First Steps: Login to Azure and select your target subscription...</h2> <p>To Login open PowerShell and execute:</p> <div class="language- extra-class"><pre class="language-text"><code>Login-AzAccount
+</code></pre></div><p>List the available Azure subscriptions:</p> <div class="language- extra-class"><pre class="language-text"><code>Get-AzSubscription
+</code></pre></div><p>Output will be something like:</p> <div class="language- extra-class"><pre class="language-text"><code>Name                     Id                                   TenantId                             State
+----                     --                                   --------                             -----
+Azure Pass - Sponsorship 79021c9b-147b-4dc0-ab8c-a3de94905f3f c097c15f-e692-4b72-8f72-490b95209f57 Enabled
+
+</code></pre></div><p>To select a specific subscription as target for further deployments you might want to ask the user:</p> <div class="language- extra-class"><pre class="language-text"><code>Get-AzSubscription | Out-GridView -PassThru | Set-AzContext
+</code></pre></div><p>Now after the context has been set you can query subscription specific details e.g. the available VM sizes in a specific region:</p> <div class="language- extra-class"><pre class="language-text"><code>Get-AzVMSize -Location 'west europe'
+</code></pre></div><p>Output should be something like:</p> <div class="language- extra-class"><pre class="language-text"><code>Name                   NumberOfCores MemoryInMB MaxDataDiskCount OSDiskSizeInMB ResourceDiskSizeInMB
+----                   ------------- ---------- ---------------- -------------- --------------------
+Standard_A0                        1        768                1        1047552                20480
+Standard_A1                        1       1792                2        1047552                71680
+Standard_A2                        2       3584                4        1047552               138240
+Standard_A3                        4       7168                8        1047552               291840
+.
+.
+.
+
+</code></pre></div><p><strong>Note:</strong> Azure resources (e.g. a virtual machine's hard disk) are provided through so called Azure Resource Providers.
+In order to create a specific resource (e.g. a VM) you have to talk to the correct resource provider (e.g. Microsoft.Compute).
+These resource providers implement the feature (e.g. a VM) in a specific region. You don't have to learn whom to talk to and where which resource providers are available - because the PowerShell Az modules you just installed do this for you.<br>
+The Az modules are <em>sort of</em> aligned to Azure Resource Providers, i.e.</p> <table><thead><tr><th>What do you want to create</th> <th>Responsible Azure Resource Provider</th> <th>PowerShell Module to use</th></tr></thead> <tbody><tr><td>Create a VM</td> <td>Microsoft.Compute</td> <td>Az.Compute</td></tr> <tr><td>Create a virtual network</td> <td>Microsoft.Network</td> <td>Az.Network</td></tr> <tr><td>...</td> <td>...</td> <td>...</td></tr></tbody></table> <p>So the commands for creating a VM are <em>'hidden'</em> in Az.Compute.
+Execute:</p> <div class="language- extra-class"><pre class="language-text"><code>Get-Command -Module Az.Compute
+</code></pre></div><p>delivers e.g.:</p> <div class="language- extra-class"><pre class="language-text"><code>CommandType     Name                                               Version    Source
+-----------     ----                                               -------    ------
+.
+.
+.
+Cmdlet          Invoke-AzVMRunCommand                              3.0.0      Az.Compute
+Cmdlet          Invoke-AzVmssVMRunCommand                          3.0.0      Az.Compute
+Cmdlet          New-AzVM                                           3.0.0      Az.Compute
+Cmdlet          New-AzVMConfig                                     3.0.0      Az.Compute
+Cmdlet          New-AzVMDataDisk                                   3.0.0      Az.Compute
+Cmdlet          New-AzVMSqlServerAutoBackupConfig                  3.0.0      Az.Compute
+.
+.
+.
+</code></pre></div><h2 id="create-a-vm-with-powershell"><a href="#create-a-vm-with-powershell" class="header-anchor">#</a> Create a VM with PowerShell ...</h2> <p>Now <strong>let's create a vm using PowerShell</strong>. But we are lazy and want to be fast so we copy example code from PowerShell help:</p> <div class="language- extra-class"><pre class="language-text"><code>help New-AzVM -Examples | clip
+</code></pre></div><p>copies the example code to the clipboard. Open PowerShell ISE and do a <strong>CTRL-V</strong> to paste the code into a editor window.
+Please <strong>choose example 3</strong> and remove the rest:
+<img src="New-AzVMinPowerShell.PNG" alt="PowerShell ISE"></p> <p><strong>Now it's your turn</strong>: e.g. remove errors - (superflous line breaks), use variables, implement the resource group creation, add login-azaccount, subscription selection...</p> <p><strong>Does it run?</strong> If yes, watch in the portal what happens.
+<strong>What is missing | outdated?</strong></p> <p>After a successful run. <strong>Cleanup</strong> e.g. by deleting the resource group with the vm using the portal</p> <p><a href="/trainingdays/day1/" class="router-link-active">back</a></p></div> <footer class="page-edit"><div class="edit-link"><a href="https://github.com/azuredevcollege/trainingdays/edit/master/day1/challenges/Challenge1/challenge-1.md" target="_blank" rel="noopener noreferrer">Edit this page</a> <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></div> <!----></footer> <!----> </main></div><div class="global-ui"></div></div>
+    <script src="/trainingdays/assets/js/app.50824011.js" defer></script><script src="/trainingdays/assets/js/2.2f47d838.js" defer></script><script src="/trainingdays/assets/js/39.3c2d65ac.js" defer></script>
+  </body>
+</html>
